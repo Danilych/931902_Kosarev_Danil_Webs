@@ -1,0 +1,87 @@
+a:not(.blueLink){ 
+    color: yellow; 
+}
+
+.FixedBody{
+    margin: 0;
+}
+
+header{
+    background-color: #EAEAEA;
+    height: 75px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 32px;
+    padding-top: 5px;
+    padding-left: 10px;
+    vertical-align: text-top;
+}
+
+.RightColumn{
+    background-color: #FDE95E;
+    padding: 0;
+    width: 200px;
+    height: 821px;
+    margin: 0;
+    float: right;
+}
+
+.LeftColumn{
+    background-color: #C8FC98;
+    padding: 0px;
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+    float: left;
+}
+
+.MiddleColumn{
+    background-color: white;
+    padding: 0;
+    margin-left: 25%;
+    margin-right: 200px;
+}
+
+.RCName{
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    font-weight: bold;
+    float: left;
+}
+
+.RedText{
+    color:red;
+    font-style: italic;
+}
+
+.MainText{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 2px;
+    line-height: 22px;
+}
+
+#TsuUrl{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer{
+    background-color: black;
+    height: 14px;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding:12px;
+}
+
+#ClearBlock{
+    clear: both;
+}
+

@@ -1,0 +1,150 @@
+*{
+    color: white;
+    font-family: Arial;
+}
+
+a:not(.blueLink){ 
+    color: red; 
+    font-family: helvetica;
+}
+
+td{ 
+    width: 55px; 
+    height: 27px; 
+    border: solid 1px silver; 
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.FixedBody{
+    margin: 0px;
+}
+
+header{
+    background-color: green;
+    height: 14px;
+    font-family: courier;
+    text-align: center;
+    margin: 0px;
+    padding:12px;
+}
+
+.Content{
+    background-color: blue;
+    padding: 0px;
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.Contenth1{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+}
+
+.Content h1, section, h2
+{
+    margin-left: 25px;
+}
+
+#RoundBox{
+    width: 90px;
+    height: 90px;
+    border: 4px solid white;
+    margin-right: 19px;
+    margin-left: 25px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 25px;
+    float: left;
+    margin-bottom: 28px;
+}
+
+.MainhText{
+    font-family: Helvetica;
+    margin-right: 30px;
+    margin-left: 25px;
+}
+
+#TsuUrl{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#ListValueName{
+    word-spacing: 8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#ListNameWordColor{
+    color: red;
+}
+
+.ul{
+    margin-Left:20px;
+    margin-top: 5px;
+    line-height: 175%;
+    margin-bottom: 8px;
+}
+
+li:nth-child(2){
+    color: cyan;
+}
+
+.Valli2{
+    letter-spacing: 4.5px;
+}
+
+#SectionStyles{
+    margin-right: 60px;
+    float: left;
+}
+
+#SectionStyles p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#h3{
+    margin:0;
+}
+
+#LineThr{
+    padding-top: 8px;
+}
+
+#likeimg{
+    padding-top: 8px;
+    float:right;
+}
+
+footer{
+    background-color: green;
+    height: 14px;
+    font-family: Arial;
+    text-align: center;
+    margin: 0px;
+    padding:12px;
+}
+
+#asideTable{
+    padding-right: 30px;
+}
+
+#tableStyle{
+    border: solid 1px silver;
+}
+
+#GreenColumn{
+    background-color: green;
+}
+
+#RedRow{
+    background-color: Red;
+}
+

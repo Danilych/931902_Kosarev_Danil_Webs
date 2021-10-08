@@ -1,0 +1,19 @@
+.FixedBody{
+    margin: 0px;
+}
+
+.FloatDiv{
+    padding: 0;
+    WIDTH:200px;
+    height:100px;
+    margin: 20px 0px 5px 20px;
+    background-color: aquamarine;
+    float: left;
+}
+
+.ClearDiv{
+    background-color: bisque;
+    border:10px white solid;
+    margin: 0px 0px 0px 0px;
+    clear: both;
+}

@@ -1,0 +1,19 @@
+.FixedBody{
+    margin: 0;
+}
+
+.Column{
+    background-color: blue;
+    padding: 0;
+    width: 600px;
+    height: 100%;
+    border: 7px white solid;
+    margin: 0 auto;
+    color: white;
+}
+
+img{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}

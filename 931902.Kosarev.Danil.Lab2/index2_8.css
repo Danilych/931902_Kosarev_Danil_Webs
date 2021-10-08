@@ -1,0 +1,45 @@
+.FixedBody{
+    margin: 0;
+}
+
+.MainDiv{
+    padding: 0;
+    margin: 5px;
+    background-color: aqua;
+}
+
+.ListDiv{
+    width:25%;
+    height:80px;
+    background-color: bisque;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.List{
+    padding-top: 15px;
+    margin-top: 0px;
+}
+
+.RightPartDiv{
+    width: 75%;
+    height:100%;
+    background-color: darkgray;
+    padding: 0;
+    margin: 0px 0px 0px 25%;
+}
+
+p{
+    margin:0;
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color: forestgreen;
+    height: 60px;
+    padding:0;
+    margin: 0;
+}

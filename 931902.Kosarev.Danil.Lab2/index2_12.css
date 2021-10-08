@@ -1,0 +1,36 @@
+.FixedBody{
+    margin: 0;
+}
+
+.MainDiv{
+    padding: 0;
+    border:3px forestgreen solid;
+    margin: 10px;
+    background-color: aqua;
+}
+
+.ListDiv{
+    width: 24.5%;
+    height:80px;
+    background-color: bisque;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block; 
+}
+
+.List{
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+.RightPartDiv{
+    width: 75%;
+    background-color: darkgray;
+    padding: 0;
+    display: inline-block;
+}
+
+p{
+    margin:0;
+}

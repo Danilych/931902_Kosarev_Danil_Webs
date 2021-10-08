@@ -1,0 +1,25 @@
+.FixedBody{
+    margin: 0;
+}
+
+.ColumnGreen{
+    background-color: Green;
+    padding: 0;
+    max-width: 500px;
+    min-width: 100px;
+    height: 100%;
+    border: 20px white solid;
+    margin: 0 auto;
+    color: white;
+}
+
+.ColumnBlue{
+    background-color: blue;
+    padding: 0;
+    max-width: 500px;
+    min-width: 100px;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    padding: 50px;
+}

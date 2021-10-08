@@ -1,0 +1,14 @@
+.FixedBody{
+    margin: 0;
+}
+
+.Column{
+    background-color: blue;
+    padding: 0;
+    max-width: 600px;
+    min-width: 100px;
+    height: 100%;
+    border: 7px white solid;
+    margin: 0 auto;
+    color: white;
+}

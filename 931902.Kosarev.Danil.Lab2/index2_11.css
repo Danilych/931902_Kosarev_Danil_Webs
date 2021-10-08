@@ -1,0 +1,22 @@
+.FixedBody{
+    margin: 0;
+}
+
+.Column{
+    background-color: aqua;
+    padding: 0;
+    margin: 5px;
+    height: 265px;
+    border: 2px forestgreen solid;
+}
+
+img{
+    margin: 0;
+    padding: 0;
+    float:right;
+}
+
+p{
+margin-top: 0;
+margin-right: 310px;
+}
