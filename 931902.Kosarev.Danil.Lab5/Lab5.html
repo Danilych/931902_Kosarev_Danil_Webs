@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Task 5</title>
+		<link rel="stylesheet" type="text/css" href="index5.css" />	
+	</head>
+	<body>
+			<div class ="feeddiv">
+				<div class="MiddleDiv">
+					<h2>Новость 1</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?</p>
+					<div class = "btnDiv"><button id="Btn1">Открыть всплывающее окно</button></div>
+					<div class = "BlackLine"></div>
+				</div>
+				<div class="MiddleDiv">
+					<h2>Новость 2</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?</p>
+					<div class = "btnDiv"><button id="Btn2">Открыть всплывающее окно</button></div>
+					<div class = "BlackLine"></div>
+				</div>
+				<div class="MiddleDiv">
+					<h2>Новость 3</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?</p>
+					<div class = "btnDiv"><button id="Btn3">Открыть всплывающее окно</button></div>
+					<div class = "BlackLine"></div>
+				</div>
+			</div>
+			<div id = "NewsDiv">
+				<div class="PopupDiv">
+					<h1 id = "newsh">Новость 1</h1>
+					<P id = "newsp">Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperioerws</P>
+					<P id = "newspp">Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperioerws</P>
+				</div>
+			</div>
+			
+			<script>
+				var modal = document.getElementById("NewsDiv");
+				var modalh = document.getElementById("newsh");
+				var modalp = document.getElementById("newsp");
+				var modalpp = document.getElementById("newspp");
+
+				var btn1 = document.getElementById("Btn1");
+				var btn2 = document.getElementById("Btn2");
+				var btn3 = document.getElementById("Btn3");
+
+				btn1.onclick = function(){
+					modalh.innerText = "Новость 1";
+					modalp.innerText = "Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugat id, eligendi ratione veritatis!";
+					modalpp.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.";
+					modal.style.display = "block";
+				}
+
+				btn2.onclick = function(){
+					modalh.innerText = "Новость 2";
+					modalp.innerText = "Новость 2: Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, alias.";
+					modalpp.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.";
+					modal.style.display = "block";
+				}
+
+				btn3.onclick = function(){
+					modalh.innerText = "Новость 3";
+					modalp.innerText = "Новость 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis debitis labore fugat id, eligendi ratione veritatis!";
+					modalpp.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.";
+					modal.style.display = "block";
+				}
+
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+	</body>
+</html>
