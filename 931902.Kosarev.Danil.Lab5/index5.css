@@ -74,20 +74,20 @@ button:focus {
 }
 
 #NewsDiv{
-    display: none;
     background-color: rgb(255, 255, 255, 0.8);
     height: 100%;
     width: 100%;
     position: fixed;
-    top:0px;
+    top:0;
+	display: none;
 }
 
 .PopupDiv{
     background-color: #e2ff74;
     width: 540px;
-    margin: 0 auto;
     position: relative;
-    top:39%;
+    top: 39%;
+    margin: auto;
     padding-bottom: 20px;
 }
 
