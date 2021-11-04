@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Task 7</title>
+		<link rel="stylesheet" type="text/css" href="index7.css" />	
+	</head>
+	<body>
+				<div class="MiddleDiv">
+					<input type="number" id="famount" name="aname">
+					<ul>
+						<li><button id="SquareBtn">Квадрат</button></li>
+						<li><button id="TriangleBtn">Треугольник</button></li>
+						<li><button id="CircleBtn">Круг</button></li>
+					</ul>
+				</div>
+				<div id = "PicsDiv">
+				</div>
+				
+			
+			<script>
+				//<img src="logo.png" alt="Like" id="logoimg">
+				var DrawDiv = document.getElementById("PicsDiv");
+
+				var btnSquare = document.getElementById("SquareBtn");
+				var btnTriangle = document.getElementById("TriangleBtn");
+				var btnCicrcle = document.getElementById("CircleBtn");
+				var si = 0;
+				var Squares = [];
+
+				var ti = 0;
+				var Triangles = [];
+
+				var ci = 0;
+				var Circles = [];
+				
+				btnSquare.onclick = function(){
+					var num = document.getElementById('famount').value;
+					
+					for(var i = 0; i<num; i++)
+					{
+						var w = Math.floor((Math.random() * 400) + 50);
+						var l = Math.floor((Math.random() * 1350) + 50);
+						var t = Math.floor((Math.random() * 400) + 50);
+
+
+						var Sqdiv = document.createElement("div");
+						DrawDiv.appendChild(Sqdiv);
+						Sqdiv.id = si.toString();
+						si = si +1;
+						Sqdiv.style.width = w.toString()+"px";
+						Sqdiv.style.height = w.toString()+"px";
+						Sqdiv.style.position = 'absolute';
+						Sqdiv.style.left = l.toString()+"px";
+						Sqdiv.style.top = t.toString()+"px";
+						Sqdiv.style.backgroundColor = 'rgba(255,0,0,0.9)';
+						Sqdiv.style.border = '1px black solid';
+						Squares.push(Sqdiv);
+
+						Sqdiv.addEventListener('click', function(e){
+							Squares.forEach(ResetSquare);
+							Triangles.forEach(ResetTriangle);
+							Circles.forEach(ResetCircle);
+							this.style.backgroundColor = 'rgba(255,255,0,0.9)'
+						});
+
+						Sqdiv.addEventListener('dblclick', function(e){
+							for(var j = 0; j < Squares.length; j++)
+							{
+								if(Squares[j].id.toString() === this.id.toString())
+								{
+									Squares.splice(j, 1);
+									break;
+								}
+							}
+
+							this.remove();
+						});
+					}
+				}
+
+				btnTriangle.onclick = function(){
+					var num = document.getElementById('famount').value;
+					
+					for(var i = 0; i<num; i++)
+					{
+						var c = Math.floor((Math.random() * 300) + 10);
+						var l = Math.floor((Math.random() * 1250) + 50);
+						var t = Math.floor((Math.random() * 400) + 50);
+
+						var Trdiv = document.createElement("div");
+						DrawDiv.appendChild(Trdiv);
+						Trdiv.id = ti.toString();
+						ti = ti +1;
+						Trdiv.style.width = "0px";
+						Trdiv.style.height = "0px";
+						Trdiv.style.position = 'absolute';
+						Trdiv.style.left = l.toString()+"px";
+						Trdiv.style.top = t.toString()+"px";
+						Trdiv.style.border = c.toString() +"px transparent solid";
+						Trdiv.style.borderBottom = c.toString() +"px solid #0000FF"
+						Triangles.push(Trdiv);
+
+						Trdiv.addEventListener('click', function(e){
+							Squares.forEach(ResetSquare);
+							Triangles.forEach(ResetTriangle);
+							Circles.forEach(ResetCircle);
+							this.style.borderBottomColor = "rgba(255,255,0,0.9)";
+						});
+
+						Trdiv.addEventListener('dblclick', function(e){
+							for(var j = 0; j < Triangles.length; j++)
+							{
+								if(Triangles[j].id.toString() === this.id.toString())
+								{
+									Triangles.splice(j, 1);
+									break;
+								}
+							}
+
+							this.remove();
+						});
+					}
+				}
+
+				btnCicrcle.onclick = function(){
+					var num = document.getElementById('famount').value;
+					
+					for(var i = 0; i<num; i++)
+					{
+						var w = Math.floor((Math.random() * 400) + 10);
+						var l = Math.floor((Math.random() * 1350) + 50);
+						var t = Math.floor((Math.random() * 400) + 50);
+
+
+						var Cidiv = document.createElement("div");
+						DrawDiv.appendChild(Cidiv);
+						Cidiv.id = ci.toString();
+						ci = ci +1;
+						Cidiv.style.width = w.toString()+"px";
+						Cidiv.style.height = w.toString()+"px";
+						Cidiv.style.position = 'absolute';
+						Cidiv.style.left = l.toString()+"px";
+						Cidiv.style.top = t.toString()+"px";
+						Cidiv.style.backgroundColor = 'rgba(0,255,0,0.9)';
+						Cidiv.style.border = '1px black solid';
+						Cidiv.style.borderRadius = '50%';
+						Circles.push(Cidiv);
+
+						Cidiv.addEventListener('click', function(e){
+							Squares.forEach(ResetSquare);
+							Triangles.forEach(ResetTriangle);
+							Circles.forEach(ResetCircle);
+							this.style.backgroundColor = 'rgba(255,255,0,0.9)'
+						});
+
+						Cidiv.addEventListener('dblclick', function(e){
+							for(var j = 0; j < Circles.length; j++)
+							{
+								if(Circles[j].id.toString() === this.id.toString())
+								{
+									Circles.splice(j, 1);
+									break;
+								}
+							}
+
+							this.remove();
+						});
+					}
+				}
+
+				function ResetSquare(item, index)
+				{
+					item.style.backgroundColor = 'rgba(255,0,0,0.9)';
+				}
+
+				function ResetTriangle(item, index)
+				{
+					item.style.borderBottomColor = "rgba(0,0,255,0.9)";
+				}
+
+				function ResetCircle(item, index)
+				{
+					item.style.backgroundColor = 'rgba(0,255,0,0.9)';
+				}
+
+			</script>
+	</body>
+</html>
