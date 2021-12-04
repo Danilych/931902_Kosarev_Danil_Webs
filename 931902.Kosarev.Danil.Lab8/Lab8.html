@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Task 8</title>
+		<link rel="stylesheet" type="text/css" href="index8.css" />	
+	</head>
+	<body>
+			<div id = "ContDiv">
+				<div class = "RowDiv" id = "Div0">
+					<input type="text" id="name" name="aname">
+					<input type="number" id="number" name="aname">
+					<button id="UpBtn">&uarr;</button>
+					<button id="DwnBtn">&darr;</button>
+					<button id="RemoveBtn">X</button>
+				</div>
+			</div>	
+			<ul>
+				<li><button id="AddBtn">Добавить элемент</button></li>
+				<li><button id="SaveBtn">Сохранить</button></li>
+			</ul>
+			<p id = "SaveP"></p>
+			<script>
+
+				var originalemptyrow = document.getElementById('Div0').cloneNode(true);
+				document.getElementById('RemoveBtn').onclick = remove;
+				document.getElementById('UpBtn').onclick = moveUp;
+				document.getElementById('DwnBtn').onclick = moveDown;
+				originalemptyrow.id = "Div-1";
+				var parentnode = document.getElementById('ContDiv');
+
+				var i = 0;
+
+				document.getElementById('AddBtn').onclick = addelement;
+				document.getElementById('SaveBtn').onclick = save;
+
+				function GetElementInsideContainer(containerID, childID) {
+					var elm = {};
+					var elms = document.getElementById(containerID).getElementsByTagName("*");
+					for (var i = 0; i < elms.length; i++) {
+						if (elms[i].id === childID) {
+							elm = elms[i];
+							break;
+						}
+					}
+					return elm;
+				}
+
+				function addelement(){
+					var clone = originalemptyrow.cloneNode(true);
+					clone.id = "Div" + ++i;
+
+					parentnode.appendChild(clone);
+					var a = GetElementInsideContainer('Div'+i, "RemoveBtn");
+					a.onclick = remove;
+					a = GetElementInsideContainer('Div'+i, "UpBtn");
+					a.onclick = moveUp;
+					a = GetElementInsideContainer('Div'+i, "DwnBtn");
+					a.onclick = moveDown;
+				}
+
+				function remove(){
+					this.parentNode.remove();
+				}
+
+				function moveUp() {
+    
+					var span = this.parentNode;
+					var	contdiv = span.parentNode;
+					
+					if (span.previousElementSibling) {
+						contdiv.insertBefore(span, span.previousElementSibling);
+					}
+				}
+
+				function moveDown() {
+    
+					var span = this.parentNode;
+					var	contdiv = span.parentNode;
+					
+					if (span.nextElementSibling) {
+						contdiv.insertBefore(span, span.nextElementSibling.nextElementSibling)
+					}
+				}
+
+				function save() {
+					var ResultString = "{"
+
+					var divs = document.getElementsByClassName("RowDiv");
+					var i = 1;
+					[].forEach.call(divs, function(el){
+						let a = GetElementInsideContainer(el.id, "name");
+						let b = GetElementInsideContainer(el.id, "number");
+
+						ResultString = ResultString + '"' + a.value + '":"' + b.value + '"';
+						if(i != divs.length)
+						{
+							ResultString = ResultString + ',';
+							i++;
+						}
+						
+					});
+					ResultString = ResultString + "}";
+					document.getElementById("SaveP").textContent = ResultString;
+				}
+			</script>
+	</body>
+</html>
