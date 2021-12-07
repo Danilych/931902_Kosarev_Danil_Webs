@@ -1,0 +1,49 @@
+*{
+    font-family: Arial;
+    font-size: 32px;
+}
+
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 90%;
+}
+
+#FrameDiv{
+    margin: 15px;
+    padding: 15px;
+    width: 415px;
+    border:cornflowerblue 5px solid;
+}
+
+#InputDiv{
+    margin: 0 auto;
+    height: 50px;
+    border: black 1px solid;
+    overflow: hidden;
+}
+
+.CalcTable{
+    border-spacing: 0px;
+}
+
+.CalcBtns{
+    padding: 10px 10px 0px 0px;
+    width: 75px;
+    height: 75px;
+}
+
+.Btns{
+    width: 100%;
+    height: 100%;
+}
+
+#RightColumn{
+    padding-right: 0px;
+}
+
+#InputTable{
+    height: 100%;
+    float: right;
+    margin-right: 5px;
+}
