@@ -1,0 +1,271 @@
+*{
+    font-family: Arial;
+    font-size: 32px;
+}
+
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#BlackSceneDiv{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#CurtsDiv{
+    position: absolute;
+    top:0px;
+    background: url("Curtains.png") center;
+    background-position: bottom;
+    background-size: cover;
+    height:100%;
+    width: 100%;
+    z-index: 6;
+}
+
+@keyframes slightslide{
+    from{
+        top:0px;
+    }
+    to{
+        top:-50px;
+    }
+}
+
+@keyframes slightslideback{
+    from{
+        top:-50px;
+    }
+    to{
+        top:0px;
+    }
+}
+
+@keyframes slideback{
+    from{
+        top:-50px;
+    }
+    to{
+        top:-950px;
+    }
+}
+
+#CurtsDiv:hover{
+    cursor: pointer;
+    animation: 0.2s ease-in-out 0s 1 slightslide forwards;
+}
+
+#CurtsDiv:not(:hover){
+    animation: 0.2s ease-in-out 0s 1 slightslideback forwards;
+}
+
+#LampBody{
+    position: relative;
+    left:0px;
+    right: 0px;
+    top: 0%;
+    z-index: 5;
+}
+
+#LampStick{
+    position: relative;
+    left:0px;
+    right: 0px;
+    top: -835px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+#LampSwitch{
+    position: relative;
+    left:0px;
+    right: 0px;
+    top: -460px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes SwitchOn{
+    from{
+        top:-460px;
+    }
+    to{
+        top:-425px;
+    }
+}
+
+@keyframes SwitchOff{
+    from{
+        top:-425px;
+    }
+    to{
+        top:-460px;
+    }
+}
+
+#LampBody:hover{
+    cursor: pointer;
+}
+
+#Light{
+	position: relative;
+    left:-400px;
+    right: 0px;
+    top: -1290px;
+    width: 100px;
+    height:100px;
+    z-index: 4;
+    border: 500px transparent solid;
+    border-top:0px;
+    border-bottom: 800px solid rgba(255,255,0,0);
+    pointer-events: none;
+}
+
+#Wizard{
+    position: relative;
+    top:-1650px;
+    left:-270px;
+    opacity: 0;
+}
+
+#Hat{
+    position: relative;
+    top:-1900px;
+    left:200px;
+    opacity: 0;
+    z-index:2;
+    width:300px
+}
+
+#Rabbit{
+    position: relative;
+    top:-2250px;
+    left:270px;
+    opacity: 0;
+    z-index:1;
+    width:100px;
+}
+
+#Pigeon{
+    position: relative;
+    top:-2100px;
+    left:150px;
+    opacity: 0;
+    z-index:1;
+    width:140px;
+}
+
+#Scene{
+    margin:0 auto;
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes LightOn{
+    from{
+        border-bottom: 800px solid rgba(255,255,0,0);
+    }
+    to{
+        border-bottom: 800px solid rgba(255,255,0,0.5);
+    }
+}
+
+@keyframes LightOff{
+    from{
+        border-bottom: 800px solid rgba(255,255,0,0.5);
+    }
+    to{
+        border-bottom: 800px solid rgba(255,255,0,0);
+    }
+}
+
+@keyframes ShowElem {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes HideElem {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes ShowElemPetDown {
+    from{
+        top:-2100px;
+        opacity: 0;
+    }
+    to{
+        top:-2100px;
+        opacity: 1;
+    }
+}
+
+@keyframes ShowElemPetUp {
+    from{
+        top:-2250px;
+        opacity: 0;
+    }
+    to{
+        top:-2250px;
+        opacity: 1;
+    }
+}
+
+@keyframes HideElemPetDown {
+    from{
+        top:-2100px;
+        opacity: 1;
+    }
+    to{
+        top:-2100px;
+        opacity: 0;
+    }
+}
+
+@keyframes HideElemPetUp {
+    from{
+        top:-2250px;
+        opacity: 1;
+    }
+    to{
+        top:-2250px;
+        opacity: 0;
+    }
+}
+
+@keyframes ShowPet {
+    from{
+        opacity: 1;
+        top:-2100px;
+    }
+    to{
+        opacity: 1;
+        top:-2250px;;
+    }
+}
+
+@keyframes HidePet {
+    from{
+        opacity: 1;
+        top:-2250px;
+    }
+    to{
+        opacity: 1;
+        top:-2100px;
+    }
+}

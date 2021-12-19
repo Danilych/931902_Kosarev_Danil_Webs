@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Task 10</title>
+		<link rel="stylesheet" type="text/css" href="index10.css" />	
+	</head>
+	<body>
+		<div id ="BlackSceneDiv">
+			<div id ="CurtsDiv" onclick="RemoveCurts()"></div>
+			<div id="Scene">
+				<img id="LampBody" src="LampUp.png" alt="Лампа" onmouseup="LightOn()" onmousedown="SwitchDown()">
+				<img id="LampSwitch" src="Switch.png" alt="Переключатель">
+				<img id="LampStick" src="LampDown.png" alt="ЛампаТело">
+				<div id="Light"></div>
+				<img id="Wizard" src="Wizard.jpg" alt="Волшебник">
+				<img id="Hat" src="Hat.png" alt="Шляпа">
+				<img id="Rabbit" src="Rabbit.png" alt="Кролик" onclick="ShowPet()">
+				<img id="Pigeon" src="Pigeon.png" alt="Голубь" onclick="ShowPet()">
+			</div>
+		</div>
+			<script>
+
+				var Rabbit = true;
+				var lightState = false;
+
+				function RemoveCurts(){
+					document.getElementById("CurtsDiv").style.animation = " 1s ease-in-out 0s 1 slideback forwards";
+				}
+
+				function SwitchDown(){
+					document.getElementById("LampSwitch").style.animation = "0.1s ease-in-out 0s 1 SwitchOn forwards";
+				}
+
+				function LightOn(){
+					document.getElementById("LampSwitch").style.animation = "0.1s ease-in-out 0s 1 SwitchOff forwards";
+					if(lightState === false){
+						document.getElementById("Light").style.animation = " 0.2s ease-in-out 0s 1 LightOn forwards";
+						document.getElementById("Wizard").style.animation = " 0.2s ease-in-out 0s 1 ShowElem forwards";
+						document.getElementById("Hat").style.animation = " 0.2s ease-in-out 0s 1 ShowElem forwards";
+						if(Rabbit===true){
+							document.getElementById("Rabbit").style.animation = " 0.2s ease-in-out 0s 1 ShowElem forwards";
+							document.getElementById("Pigeon").style.animation = " 0.2s ease-in-out 0s 1 ShowElem forwards";
+						} else {
+							document.getElementById("Rabbit").style.animation = " 0.2s ease-in-out 0s 1 ShowElemPetDown forwards";
+							document.getElementById("Pigeon").style.animation = " 0.2s ease-in-out 0s 1 ShowElemPetUp forwards";
+						}
+						
+						
+						lightState = true;
+					} else {
+						document.getElementById("Light").style.animation = " 0.2s ease-in-out 0s 1 LightOff forwards";
+						document.getElementById("Wizard").style.animation = " 0.2s ease-in-out 0s 1 HideElem forwards";
+						document.getElementById("Hat").style.animation = " 0.2s ease-in-out 0s 1 HideElem forwards";
+						if(Rabbit===true){
+							document.getElementById("Rabbit").style.animation = " 0.2s ease-in-out 0s 1 HideElem forwards";
+							document.getElementById("Pigeon").style.animation = " 0.2s ease-in-out 0s 1 HideElem forwards";
+						} else {
+							document.getElementById("Rabbit").style.animation = " 0.2s ease-in-out 0s 1 HideElemPetDown forwards";
+							document.getElementById("Pigeon").style.animation = " 0.2s ease-in-out 0s 1 HideElemPetUp forwards";
+						}
+						lightState = false;
+					}
+				}
+
+				function ShowPet(){
+					if(lightState === true){
+						if(Rabbit === true){
+							document.getElementById("Rabbit").style.animation = " 0.5s ease-in-out 0s 1 HidePet forwards";
+							document.getElementById("Pigeon").style.animation = " 0.5s ease-in-out 0.75s 1 ShowPet forwards";
+							Rabbit = false;
+						} else{
+							document.getElementById("Rabbit").style.animation = " 0.5s ease-in-out 1s 1 ShowPet forwards";
+							document.getElementById("Pigeon").style.animation = " 0.5s ease-in-out 0s 1 HidePet forwards";
+							Rabbit = true;
+						}
+					}
+				}
+
+			</script>
+	</body>
+</html>
